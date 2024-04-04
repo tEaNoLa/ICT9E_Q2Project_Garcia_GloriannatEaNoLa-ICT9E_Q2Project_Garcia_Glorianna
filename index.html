@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            overflow-y: scroll;
+            background-image: url('YUNJIN3.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            color:black;
+        }
+
+        h2 {
+            color:black;
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            text-align: center;
+            font-size: 12px;
+        }
+        h1 {
+            color:black;
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: 12px;
+            text-align: center;
+        }
+
+        .rounded {
+            width:250px;
+            height:350px;
+        }
+
+        .navbar {
+            background-color: white; 
+            height: 90px;
+        }
+
+        .navbar-brand img {
+            margin-left: 15px;
+            height: 30px;
+        }
+
+        .nav-link {
+            font-size: 12px;
+            color: pink;
+            margin-left: 10px; 
+        }
+
+        .container-glass {
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(225, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            padding: 20px;
+            margin-top: 20px;
+            width:100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .inner-container {
+            background-color: white; 
+            border-radius: 10px; 
+            padding: 25px; 
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3); 
+            max-width: 600px; 
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+
+        .inner-container2 {
+            background-color: black; 
+            color: white;
+            border-radius: 10px; 
+            padding: 20px; 
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3); 
+            width:600px;
+            margin-right:50px;
+            margin-bottom: 80px;
+        }
+
+        .rounded {
+            filter:drop-shadow(10px 15px);
+        }
+
+        .picture {
+           
+            margin-left: 50px;
+            margin-bottom:80px;
+        }
+
+        .picture img {
+            width: 280px; /* Increase the width of the images */
+            height: 280px; /* Increase the height of the images */
+            border-radius: 50%; /* Make images perfectly shaped circles */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .image-container:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-container:hover {
+            transform: scale(1.05);
+        }
+        .social-navbar {
+    background-color: white; /* Set background color to white */
+    padding: 10px 0; /* Add padding */
+    text-align: center; /* Align links to center */
+}
+
+.social-navbar ul {
+    list-style-type: none; /* Remove bullets from the list */
+    margin: 0;
+    padding: 0;
+}
+
+.social-navbar ul li {
+    display: inline-block; /* Display items horizontally */
+    margin-right: 40px; /* Add margin between items */
+}
+
+.social-navbar ul li:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+
+.social-navbar ul li a img {
+    width: 40px; /* Set the width of the icons */
+    height: 40px; /* Set the height of the icons */
+    border-radius: 50%; /* Make the icons circular */
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.social-navbar ul li a img:hover {
+    transform: scale(1.1); /* Zoom in the icon on hover */
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img class="Logo" src="VOGUELOGO.png">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><u>Fashion</u></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><u>Beauty</u></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><u>Lifestyle</u></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><u>Runway</u></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container container-glass">
+        <h2> FEATURED ARTIST</h2>
+        <h1> Huh Yunjin </h1>
+        <br>
+        <div style="display: flex; align-items: center;">
+            <img class="rounded" src="YUNJIN2.jpg">
+            <div class="inner-container"> 
+                <p style="font-size: 15px;"> Huh Yunjin, also known as Jennifer Huh, is a member of the South Korean girl group LE SSERAFIM under Source Music. Born on October 8, 2001, in Seoul, South Korea, she grew up in the USA before moving back to pursue her dream of becoming a trainee. Huh Yunjin believes she can change the K-pop industry
+                    <br>
+                    <br>
+                She was revealed as the sixth and final member on April 9, 2022. The group debuted with the extended play Fearless on May 2, 2022; Huh was credited as a songwriter on the track "Blue Flame". On August 9, 2022, Huh released her first single "Raise Y_our Glass" to commemorate the 100th day of her debut with Le Sserafim. She co-wrote three songs for Le Sserafim's second EP, Antifragile: "Impurities", "No Celestial" and "Good Parts (When the Quality Is Bad but I Am)". </p>
+            </div>
+       </div>
+        <br>
+        <br>
+        <div style="display: flex; align-items: center;">
+           
+            <div class="inner-container2"> 
+                <p style="font-size:15px;"> 
+                    On Music
+                    <br>
+                    Huh released her second single "I ≠ Doll" on January 9, 2023, a rock-influenced track addressing the judgment she faces as an idol based solely on her appearance. Her third single, "Love You Twice" (피어나도록), dropped on March 14, 2023, accompanied by a music video depicting a fan inspired by an idol. "Blessing in Disguise," her fourth single released on August 14, 2023, addresses her return to South Korea with funk influences. On January 17, 2024, Huh featured on GroovyRoom's "Yes or No" with Crush, peaking at number 57 on the Melon chart. She later collaborated with Max on "Stupid In Love" and with J-Hope on "i don’t know" for his album released on March 29, 2024. 
+                    <br>
+                    <br>
+                    Below is her official Spotify Album which features all her songs.
+                </p>
+            </div>
+             <div class="picture">
+                <img class="rounded-circle float-start" src="YUNJIN1.jpg">
+            </div>
+        </div>
+        <iframe style="border-radius: 12px;" src="https://open.spotify.com/embed/artist/13yWtUnz63q5VIs5SwoMhy?utm_source=generator&theme=0" width="798" height="598" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <br>
+        <br>
+        <h3> MORE PICTURES OF HUH YUNJIN </h3>
+        <br>
+        <div class="gallery">
+            <div class="image-container">
+                <img src= "YUNJIN48.jpg" alt="Image 1">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>2018</h3>
+                        <p>Huh Yunjin in Produce 48</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="YUNJINOPERA.jpg" alt="Image 2">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>2015</h3>
+                        <p>Yunjin in Produce 48 singing 'The Phantom of the Opera'</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="YUNJINSTAGE.jpg" alt="Image 3">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>2023</h3>
+                        <p>Yunjin's latest stage performance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src= "YUNJIN4.jpg" alt="Image 4">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>2023</h3>
+                        <p>Yunjin covering a Vogue photoshoot</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="YUNJIN7.jpg" alt="Image 5">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>2023</h3>
+                        <p>Yunjin covering a Vogue photoshoot</p>
+                    </div>
+                </div>
+            </div>
+            <div class="image-container">
+                <img src="YUNJIN9.jpg" alt="Image 6">
+                <div class="overlay">
+                    <div class="overlay-content">
+                        <h3>2023</h3>
+                        <p>Picture of Yunjin attending the NBA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <footer>
+    <nav class="social-navbar">
+        <ul>
+            <li><a href="#"><img src="tiktok.jpg" alt="TikTok"></a></li>
+            <li><a href="#"><img src="yt.png" alt="YouTube"></a></li>
+            <li><a href="#"><img src="insta.jpg" alt="Instagram"></a></li>
+            <li><a href="#"><img src="twitter.png" alt="Twitter"></a></li>
+        </ul>
+    </nav>
+</footer>
+</body>
+</html>
